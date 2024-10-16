@@ -4,7 +4,9 @@ This repository is the official implementation of our paper "Neuron-based Person
 To better identify personality-related neurons, we first constructed the PersonalityBench dataset, comprising 180,000 open-ended questions tailored to capture distinct personality traits based on Big Five personality theory. Specifically, we utilize the description from IPIP-NEO-300 questionnaire and common real-world topics introduced in UltraChat to generate the situational questions in PersonalityBench. The dataset is shown in `NPTI/datset`. 
 ## Personality-related Neurons Found by NPTI
 Within a given layer, the FFN module can be expressed as:
-$$\bm{h} = \left( \sigma \left( \hat{\bm{h}} \bm{W}_1 \right) \odot \left(\hat{\bm{h}} \bm{W}_3 \right) \right)\cdot \bm{W}_2,$$
+
+$$**h** = \left( \sigma \left( \hat{**h**} **W**_1 \right) \odot \left(\hat{**h**} **W**_3 \right) \right)\cdot \bm{W}_2,$$
+
 where $\hat{\bm{h}}\in \mathbb{R}^{d}$ represents the output of the MHA module for a specific token in this layer. The function $\sigma(\cdot)$ typically denotes a non-linear activation function, such as SiLU~\citep{ramachandran2017searching}. The learned projection matrices are $\bm{W}_1 \in \mathbb{R}^{d \times d'}$, $\bm{W}_2 \in \mathbb{R}^{d' \times d}$, and $\bm{W}_3 \in \mathbb{R}^{d \times d'}$. In this context, a \emph{neuron} is conceptualized as applying a linear transformation to a specific column of the weight matrix $\bm{W}_1$ followed by a non-linear activation function to the result.
 We found the neurons that related to the positive/negative aspect of each personality trait. The neurons can be found in `NPTI/neuron_results`.
 ## Identifying Language-specific Neurons
