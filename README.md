@@ -7,7 +7,7 @@ Within a given layer, the FFN module can be expressed as:
 
 $$**h** = \left( \sigma \left( \hat{**h**} **W**_1 \right) \odot \left(\hat{**h**} **W**_3 \right) \right)\cdot **W**_2,$$
 
-where $\hat{**h**}$ in $\mathbb{R}^{d}$ represents the output of the MHA module for a specific token in this layer. The function $\sigma(\cdot)$ typically denotes a non-linear activation function, such as SiLU. The learned projection matrices are $**W**_1$ $\in$ $\mathbb{R}^{d \times d'}$, $**W**_2$ in $\mathbb{R}^{d' \times d}$, and $**W**_3$ \in \mathbb{R}^{d \times d'}$. In this context, a \emph{neuron} is conceptualized as applying a linear transformation to a specific column of the weight matrix $**W**_1$ followed by a non-linear activation function to the result.
+where $\hat{**h**}$ in $\mathbb{R}^{d}$ represents the output of the MHA module for a specific token in this layer. The function $\sigma(\cdot)$ typically denotes a non-linear activation function, such as SiLU. The learned projection matrices are **W**_1 $\in$ $\mathbb{R}^{d \times d'}$, $**W**_2$ in $\mathbb{R}^{d' \times d}$, and $**W**_3$ \in \mathbb{R}^{d \times d'}$. In this context, a \emph{neuron} is conceptualized as applying a linear transformation to a specific column of the weight matrix $**W**_1$ followed by a non-linear activation function to the result.
 We found the neurons that related to the positive/negative aspect of each personality trait. The neurons can be found in `NPTI/neuron_results`.
 ## Identifying Language-specific Neurons
 To find personality-related neurons in LLaMA-8B-Instruct, you can excute:
