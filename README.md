@@ -1,8 +1,9 @@
 # NPTI
-This repository is the official implementation of our paper "Neuron based Personality Trait Induction in Large Language Models".
-
+This repository is the official implementation of our paper "Neuron-based Personality Trait Induction in Large Language Models".
+## Dataset
+To better identify personality-related neurons, we firstly constructed the \textsc{PersonalityBench} dataset, comprising 180,000 open-ended questions tailored to capture distinct personality traits based on Big Five personality theory. Specifically, we utilize the \textsc{IPIP-NEO-300} questionnaire~\citep{goldberg1999broad,goldberg2006international} to generate the situational questions in \textsc{PersonalityBench}. 
 ## Personality-related Neurons Found by NPTI
-In this work , we propose the novel NPTI method, which can effectively perform personality trait induction for LLMs. To better identify personality-related neurons, we firstly constructed the \textsc{PersonalityBench} dataset, comprising 180,000 open-ended questions tailored to capture distinct personality traits based on Big Five personality theory. The dataset is shown in `NPTI/datset`. Based on \textsc{PersonalityBench}, we designed an efficient identification method for personality-related neurons.
+In this work , we propose the novel NPTI method, which can effectively perform personality trait induction for LLMs. The dataset is shown in `NPTI/datset`. Based on \textsc{PersonalityBench}, we designed an efficient identification method for personality-related neurons.
 ## Identifying Language-specific Neurons
 To find personality-related neurons in LLaMA-8B-Instruct,you can excute:
 ```bash
